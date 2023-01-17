@@ -15,10 +15,7 @@ class Solution {
             return false
         }
         
-        let firstHashTable = hashTable(for: firstString)
-        let secondHashTable = hashTable(for: secondString)
-        
-        return firstHashTable == secondHashTable
+        return hashTable(for: firstString) == hashTable(for: secondString)
     }
     
     private func hashTable(for string: String) -> [Character: Int] {
