@@ -9,14 +9,14 @@ import XCTest
 @testable import ValidAnagram
 
 class Solution {
-    func isAnagram(_ s: String, _ t: String) -> Bool {
+    func isAnagram(_ firstString: String, _ secondString: String) -> Bool {
         
-        if s.isEmpty && t.isEmpty {
+        if firstString.isEmpty && secondString.isEmpty {
             return false
         }
         
-        let firstHashTable = hashTable(for: s)
-        let secondHashTable = hashTable(for: t)
+        let firstHashTable = hashTable(for: firstString)
+        let secondHashTable = hashTable(for: secondString)
         
         return firstHashTable == secondHashTable
     }
