@@ -47,6 +47,12 @@ final class ValidAnagramTests: XCTestCase {
         
         XCTAssertEqual(result, false)
     }
-
-
+    
+    func test_isAnagram_returnsFalseOnNotAnagram() {
+        let sut = Solution()
+        
+        let result = sut.isAnagram("rat", "car")
+        
+        XCTAssertEqual(result, false)
+    }
 }
