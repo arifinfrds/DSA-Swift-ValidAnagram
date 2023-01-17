@@ -15,27 +15,25 @@ class Solution {
             return false
         }
         
-        var firstHashTable = [Character: Int]()
-        
-        for character in s {
-            if let count = firstHashTable[character] {
-                firstHashTable[character] = count + 1
-            } else {
-                firstHashTable[character] = 1
-            }
-        }
-        
-        var secondHashTable = [Character: Int]()
-        
-        for character in t {
-            if let count = secondHashTable[character] {
-                secondHashTable[character] = count + 1
-            } else {
-                secondHashTable[character] = 1
-            }
-        }
+        let firstHashTable = hashTable(for: s)
+        let secondHashTable = hashTable(for: t)
         
         return firstHashTable == secondHashTable
+    }
+    
+    private func hashTable(for string: String) -> [Character: Int] {
+        
+        var hashTable = [Character: Int]()
+        
+        for character in string {
+            if let count = hashTable[character] {
+                hashTable[character] = count + 1
+            } else {
+                hashTable[character] = 1
+            }
+        }
+        
+        return hashTable
     }
 }
 
