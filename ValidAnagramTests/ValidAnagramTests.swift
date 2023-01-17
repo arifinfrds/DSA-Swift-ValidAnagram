@@ -18,7 +18,7 @@ class Solution {
         var firstHashTable = [Character: Int]()
         
         for character in s {
-            if let count = firstHashTable[character], count == 1 {
+            if let count = firstHashTable[character] {
                 firstHashTable[character] = count + 1
             } else {
                 firstHashTable[character] = 1
@@ -28,7 +28,7 @@ class Solution {
         var secondHashTable = [Character: Int]()
         
         for character in t {
-            if let count = secondHashTable[character], count == 1 {
+            if let count = secondHashTable[character] {
                 secondHashTable[character] = count + 1
             } else {
                 secondHashTable[character] = 1
