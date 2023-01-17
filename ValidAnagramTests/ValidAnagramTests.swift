@@ -40,7 +40,7 @@ final class ValidAnagramTests: XCTestCase {
         XCTAssertEqual(result, false)
     }
     
-    func test_isAngram_returnsFalseOnDifferentStringsCount() {
+    func test_isAnagram_returnsFalseOnDifferentStringsCount() {
         let sut = Solution()
         
         let result = sut.isAnagram("abc", "a")
