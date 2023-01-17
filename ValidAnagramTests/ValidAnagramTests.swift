@@ -23,5 +23,13 @@ final class ValidAnagramTests: XCTestCase {
         
         XCTAssertEqual(result, false)
     }
+    
+    func test_isAnagram_returnsFalseOnFirstStringsIsEmpty() {
+        let sut = Solution()
+        
+        let result = sut.isAnagram("non-empty-string", "")
+        
+        XCTAssertEqual(result, false)
+    }
 
 }
