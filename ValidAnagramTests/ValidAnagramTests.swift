@@ -35,11 +35,7 @@ class Solution {
             }
         }
         
-        if firstHashTable == secondHashTable {
-            return true
-        } else {
-            return false
-        }
+        return firstHashTable == secondHashTable
     }
 }
 
